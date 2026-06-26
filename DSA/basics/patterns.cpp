@@ -1,3 +1,5 @@
+//these are strivers a2z dsa sheet's 22 pattern tricks before solving coding problems
+
 #include<iostream>
 using namespace std;
 
