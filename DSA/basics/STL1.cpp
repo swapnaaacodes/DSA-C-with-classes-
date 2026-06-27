@@ -11,7 +11,7 @@ void vectors(){
     
     // to print
     for(auto i:v){
-        cout<<i<<" " ;
+        cout<<i<<" " ;  // prints {100, 100, 100, 100}
     }
 
     
@@ -34,10 +34,15 @@ void vectors(){
     vector<int>copy(2,50); // {50, 50}
     v.insert(v.begin(), copy.begin(), copy.end()); // {50, 50, 300, 100, 45, 45, 45, 100}
 
+    
+    // checks size
 
     // {10,20}
     cout<<v.size(); // 2
     v.pop_back(); // pops the last element in a vector {10}
+
+
+    // swaps two vectors
 
     // v1 -> {10,20}
     // v2 -> {30,40}
