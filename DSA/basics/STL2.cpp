@@ -87,4 +87,64 @@ void explainQueue(){
 // time complexity of queue is big Oh of 1 or O(1).
 
 
-// 7. priority queue
+// 7. priority queue or max heap
+
+void explainPQ(){
+    priority_queue<int>pq;
+    pq.push(1); // {1}
+    pq.push(5); // {5,1}
+    pq.push(3); // {5,3,1}
+    pq.emplace(10); // {10,5,3,1}
+
+    cout<< pq.top(); // {10}
+    pq.pop(); // {5,3,1}
+    cout<< pq.top(); // {5}
+
+    // rest functions are same as others like size, swap, empty etc.
+
+
+
+// 8. Minimum Heap/min heap
+
+
+    priority_queue<int, vector<int>, greater<int>>sp;
+    sp.push(5); // {5}
+    sp.push(2); // {2,5}
+    sp.emplace(1); // {1,2,5}
+
+    cout<<sp.top(); // prints 1
+
+    // rest functions same as others
+
+}  // T.C of push,pop : log n, top : O(1)
+
+
+// 9. SET means **sorted and unique**
+
+void explainSET(){
+    set<int>st;
+    st.insert(1); // {1}
+    st.insert(5); // {1,5}
+    st.emplace(4); // {1,4,5}
+    st.insert(2); // {1,2,4,5}
+    st.insert(2); // {1,2,4,5}
+
+    // {1,2,3,4,5}
+    auto it = st.find(2); // returns iterator which points to 2.
+    auto it = st.find(6); // returns st.end(), iterator which points after 5
+
+    st.erase(5); // deletes 5 // takes logarithmic time
+
+    int cnt = st.count(1); // if 1 is present, will print 1 occurence as set is unique
+                            // if 1 is not present, will print 0
+
+    auto it = st.find(3);
+    st.erase(it);   // find iterator of the element, then deletes it
+    // it takes constant time
+
+    // {1,2,3,4,5}
+    auto it1 = st.find(2);
+    auto it2 = st.find(5); 
+    st.erase(it1,it2); // {1,5} [start,end)
+    
+}

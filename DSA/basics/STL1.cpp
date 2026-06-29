@@ -27,7 +27,7 @@ void vectors(){
 
     // insertion-function
 
-    vector<int>v(2,100); // {100,100}
+    vector<int>v = {100,100}; // {100,100}
     v.insert(v.begin(),300); // {300,100,100}
     v.insert(v.begin()+2,3,45); // {300,100, 45, 45, 45, 100}
 
