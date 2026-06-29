@@ -120,6 +120,9 @@ void explainPQ(){
 
 
 // 9. SET means **sorted and unique**
+// sets also can't be randomly accessed
+// you can either move forward or backward
+// you cannot do it+5 or access by index directly
 
 void explainSET(){
     set<int>st;
@@ -146,5 +149,13 @@ void explainSET(){
     auto it1 = st.find(2);
     auto it2 = st.find(5); 
     st.erase(it1,it2); // {1,5} [start,end)
+
+
+    // lowerbound and upperbound check notes
+    // {1,2,3,4,5}
+    auto it = st.lower_bound(2); // prints index 1
+    auto it = st.upper_bound(2); // prints index 2
     
+    // every functions like inserting, erasing the T.C is (log N)
+
 }
